@@ -82,10 +82,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/BackSubstitution.h">
+			<Option target="SOLASolvers"/>
+		</Unit>
 		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/DenseMatrix.h">
 			<Option target="SOLASolvers"/>
 		</Unit>
+		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/GaussMethod.h">
+			<Option target="SOLASolvers"/>
+		</Unit>
+		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/Triplet.h">
+			<Option target="SOLASolvers"/>
+		</Unit>
+		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/consts.h">
+			<Option target="SOLASolvers"/>
+		</Unit>
 		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/main.cpp">
+			<Option target="SOLASolvers"/>
+		</Unit>
+		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/tests/tests.h">
 			<Option target="SOLASolvers"/>
 		</Unit>
 		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/CMakeLists.txt">
