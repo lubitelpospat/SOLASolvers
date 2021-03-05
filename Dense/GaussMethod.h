@@ -5,14 +5,14 @@
 #ifndef SOLASOLVERS_GAUSSMETHOD_H
 #define SOLASOLVERS_GAUSSMETHOD_H
 #include "DenseMatrix.h"
-#include "consts.h"
+#include "../utils/consts.h"
 #include "BackSubstitution.h"
 
 template<typename T>
 typename DenseMatrix<T>::idx_t GetFirstNonZeroElementInColumn(const DenseMatrix<T>& A, const typename DenseMatrix<T>::idx_t& columnNumber) {
     // Returns First non-zero element in a given matrix column
     using idx_t = typename DenseMatrix<T>::idx_t;
-    auto sizePair = A.GetSize();
+     auto sizePair = A.GetSize();
     auto W = sizePair.first;
     auto H = sizePair.second;
     if (absT(A(columnNumber, columnNumber)) > tolerance<T>) {
@@ -67,7 +67,7 @@ std::size_t MakeTriangle(DenseMatrix<T>& A, std::vector<T>& b) { //Ax=b
 template<typename T>
 std::vector<T> GaussMethod(DenseMatrix<T> A, std::vector<T> b) {
     MakeTriangle(A, b);
-    return SubstituteBack(A, b);
+    return SubstituteBackUpperTriangular(A, b);
 }
 
 

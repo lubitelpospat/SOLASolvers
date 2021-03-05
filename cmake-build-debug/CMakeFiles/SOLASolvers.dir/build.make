@@ -99,6 +99,9 @@ SOLASolvers_EXTERNAL_OBJECTS =
 
 SOLASolvers: CMakeFiles/SOLASolvers.dir/main.cpp.o
 SOLASolvers: CMakeFiles/SOLASolvers.dir/build.make
+SOLASolvers: /usr/lib/libboost_system.so.1.75.0
+SOLASolvers: /usr/lib/libboost_filesystem.so.1.75.0
+SOLASolvers: /usr/lib/libboost_iostreams.so.1.75.0
 SOLASolvers: CMakeFiles/SOLASolvers.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alex/Documents/Pet/SOLASolvers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SOLASolvers"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SOLASolvers.dir/link.txt --verbose=$(VERBOSE)

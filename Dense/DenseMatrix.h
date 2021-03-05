@@ -8,8 +8,8 @@
 #include<vector>
 #include<set>
 #include<iostream>
-#include "Triplet.h"
-
+#include "../utils/Triplet.h"
+#include "../utils/overloads.h"
 template<typename T>
 class DenseMatrix{
 public:
@@ -27,6 +27,10 @@ public:
         }
 
     };
+    DenseMatrix(const idx_t &h, const idx_t &w): W(w), H(h){
+        matrix.resize(W*H);
+
+    };
 
 
     elem_t& operator()(const idx_t& i, const idx_t& j) {
@@ -39,6 +43,13 @@ public:
     const std::pair<idx_t, idx_t> GetSize() const {
         return std::pair<idx_t, idx_t>(W, H);
     }
+    const idx_t GetSizeH() const {
+        return H;
+    }
+
+    const idx_t GetSizeW() const {
+        return W;
+    }
 
     void swapRows(const idx_t& firstRow, const idx_t& secondRow) {
         for (idx_t i=0;i<W; ++i ) {
@@ -47,8 +58,9 @@ public:
     }
 
 };
+
 template<typename T>
-std::ostream& operator<<(std::ostream& os, const DenseMatrix<T>& A) {
+std::ostream& operator<<(std::ostream& os, const  DenseMatrix<T>& A) {
     using idx_t = typename DenseMatrix<T>::idx_t;
 
     auto sizePair = A.GetSize();
@@ -77,4 +89,19 @@ std::ostream& operator<<(std::ostream& os, const DenseMatrix<T>& A) {
     }
     return os;
 }
+
+template<typename T>
+std::vector<T> operator*(const DenseMatrix <T> &A, const std::vector<T> &b) {
+    std::vector<T> result(b.size());
+    for (size_t i=0; i<A.GetSizeH(); ++i) {
+        T sum = 0;
+        for (size_t j=0; j<A.GetSizeW(); ++j) {
+            sum += A(i, j) * b[j];
+        }
+        result[i] = sum;
+
+    }
+    return result;
+}
+
 #endif //SOLASOLVERS_DENSEMATRIX_H
