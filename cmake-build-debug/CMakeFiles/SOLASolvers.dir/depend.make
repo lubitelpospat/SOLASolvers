@@ -7,6 +7,10 @@ CMakeFiles/SOLASolvers.dir/main.cpp.o: ../Dense/GaussMethod.h
 CMakeFiles/SOLASolvers.dir/main.cpp.o: ../Dense/LU.h
 CMakeFiles/SOLASolvers.dir/main.cpp.o: ../Generators/GenerateDenseMatrix.h
 CMakeFiles/SOLASolvers.dir/main.cpp.o: ../Generators/GenerateVector.h
+CMakeFiles/SOLASolvers.dir/main.cpp.o: ../Sparse/CSR.h
+CMakeFiles/SOLASolvers.dir/main.cpp.o: ../Sparse/GaussSeidel.h
+CMakeFiles/SOLASolvers.dir/main.cpp.o: ../Sparse/Jacobi.h
+CMakeFiles/SOLASolvers.dir/main.cpp.o: ../Sparse/SimpleIteration.h
 CMakeFiles/SOLASolvers.dir/main.cpp.o: ../main.cpp
 CMakeFiles/SOLASolvers.dir/main.cpp.o: ../tests/testGauss.h
 CMakeFiles/SOLASolvers.dir/main.cpp.o: ../tests/testLU.h

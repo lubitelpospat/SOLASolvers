@@ -22,7 +22,7 @@ void TestGauss(const size_t& minDim, const size_t& maxDim) {
 
             std::set<Triplet<T>> tmp_set = GenerateSquareDenseMatrix<T>(i, -1000, 1000);
             DenseMatrix<T> A = DenseMatrix<T>(i, i, tmp_set);
-            std::vector<T> b = GenerateVector<T>(i, -1, 1);
+            std::vector<T> b = GenerateVector<T>(i);
             std::vector<T> solution = GaussMethod(A, b);
             T error_ = log(norm2(b - A*solution));
             data.emplace_back(i, error_);

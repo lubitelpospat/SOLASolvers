@@ -43,11 +43,11 @@ public:
     const std::pair<idx_t, idx_t> GetSize() const {
         return std::pair<idx_t, idx_t>(W, H);
     }
-    const idx_t GetSizeH() const {
+    [[nodiscard]] idx_t GetSizeH() const {
         return H;
     }
 
-    const idx_t GetSizeW() const {
+    [[nodiscard]] idx_t GetSizeW() const {
         return W;
     }
 

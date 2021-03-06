@@ -32,7 +32,15 @@ std::vector<T> operator+(const std::vector<T>& a, const std::vector<T>& b) {
     return result;
 
 }
-
+template<typename T1, typename T2>
+std::vector<T2> operator*(const T1& a, const std::vector<T2>& v) {
+    std::vector<T2> result(v.size());
+    T2 alpha = T2(a);
+    for (size_t i=0; i<v.size(); ++i) {
+        result[i] = v[i] * alpha;
+    }
+    return result;
+}
 
 
 template<typename T>
@@ -49,6 +57,7 @@ std::ostream& operator<<(std::ostream& s, const std::vector<T>& v) {
     }
     return s;
 }
+
 
 
 

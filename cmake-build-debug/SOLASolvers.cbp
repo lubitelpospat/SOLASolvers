@@ -90,6 +90,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/Chebyshev/Chebyshev.h">
+			<Option target="SOLASolvers"/>
+		</Unit>
 		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/Dense/BackSubstitution.h">
 			<Option target="SOLASolvers"/>
 		</Unit>
@@ -106,6 +109,18 @@
 			<Option target="SOLASolvers"/>
 		</Unit>
 		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/Generators/GenerateVector.h">
+			<Option target="SOLASolvers"/>
+		</Unit>
+		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/Sparse/CSR.h">
+			<Option target="SOLASolvers"/>
+		</Unit>
+		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/Sparse/GaussSeidel.h">
+			<Option target="SOLASolvers"/>
+		</Unit>
+		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/Sparse/Jacobi.h">
+			<Option target="SOLASolvers"/>
+		</Unit>
+		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/Sparse/SimpleIteration.h">
 			<Option target="SOLASolvers"/>
 		</Unit>
 		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/main.cpp">

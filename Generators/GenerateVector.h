@@ -6,7 +6,7 @@
 #define SOLASOLVERS_GENERATEVECTOR_H
 
 template <typename T>
-std::vector<T> GenerateVector(const size_t& size, const int& min, const int& max) {
+std::vector<T> GenerateVector(const size_t &size, const int& min, const int& max) {
     srand(time(0));
     std::vector<T> result(size);
     for (size_t i=0; i<size; ++i) {

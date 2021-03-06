@@ -8,14 +8,25 @@
 #include "tests/testGauss.h"
 #include "tests/testLU.h"
 #include "tests/testLUSolver.h"
+#include "Sparse/Jacobi.h"
+#include "Sparse/GaussSeidel.h"
+#include "Sparse/SimpleIteration.h"
+#include "Sparse/CSR.h"
 int main() {
     using T = double;
     //using idx_t = typename DenseMatrix<T>::idx_t;
     size_t minDim=3;
     size_t maxDim = 100;
-    std::set<Triplet<T>> tmp_set = GenerateSquareDenseMatrix<T>(10, -100, 100);
-    DenseMatrix<T> A = DenseMatrix<T>(10, 10, tmp_set);
-    std::vector<T> b = GenerateVector<T>(10, -1, 1);
-    std::cout << LUSolver<T>(A, b) << std::endl << GaussMethod<T>(A, b) << std::endl;
-    TestLUSolver<T>(minDim, maxDim);
+    std::set<Triplet<T>> tmp_set;
+    for (size_t i=0; i<300; ++i) {
+        tmp_set.insert({i, i, 1 + T(i+1)/598});
+
+    }
+    DenseMatrix<T> D = DenseMatrix<T>(300, 300, tmp_set);
+    CSRMatrix<T> S = CSRMatrix<T>(300, 300, tmp_set);
+    //auto tmp_set1 = GenerateSquareDenseMatrix<T>(300, -1.5, 1.5);
+    //CSRMatrix<T> A = CSRMatrix<T>(300, 300, tmp_set);
+
+    std::vector<T> b = GenerateVector<T>(300, -1, 1);
+    std::cout << GaussMethod<T>(D, b) << std::endl << GaussSeidelSolver<T>(S, b) << std::endl << SimpleIterSolver<T>(S, b, 1);
 }
