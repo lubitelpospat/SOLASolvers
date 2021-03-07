@@ -34,7 +34,7 @@ template<typename T>
     bool flag = true;
     while(flag) {
         for(auto root: roots){
-            x = x - -static_cast<T>(1)/root * r;
+            x = x - static_cast<T>(1)/root * r;
             r = b - A*x;
             norm = norm2(x);
 
