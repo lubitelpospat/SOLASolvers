@@ -26,13 +26,6 @@ T norm2(const std::vector<T>& a) {
     return sqrt(result);
 }
 
-template<typename T>
-T mean(const std::vector<T>& a) {
-    T result = 0;
-    for (size_t i=0; i<a.size(); ++i) {
-        result += a[i];
-    }
-    return result/static_cast<T>(a.size());
-}
+
 
 #endif //SOLASOLVERS_CONSTS_H

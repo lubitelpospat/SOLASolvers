@@ -32,9 +32,6 @@ std::vector<T> SubstituteBackLowerTriangular(const DenseMatrix<T>& A, const std:
     //using idx_t = typename DenseMatrix<T>::idx_t;
     size_t size_b = b.size();
     std::vector<T> result(size_b);
-    auto sizePair = A.GetSize();
-    auto W = sizePair.first;
-    auto H = sizePair.second;
     result[0] = b[0]/A(0, 0);
     T sum_;
     for (int i=1; i<A.GetSizeH(); ++i) {

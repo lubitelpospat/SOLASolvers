@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/home/alex/Documents/Pet/SOLASolvers/Chebyshev/Chebyshev.h
+vector
+-
+algorithm
+-
+cmath
+-
+
 /home/alex/Documents/Pet/SOLASolvers/Dense/BackSubstitution.h
 
 /home/alex/Documents/Pet/SOLASolvers/Dense/DenseMatrix.h
@@ -66,11 +74,29 @@ vector
 ../utils/consts.h
 /home/alex/Documents/Pet/SOLASolvers/utils/consts.h
 
+/home/alex/Documents/Pet/SOLASolvers/Sparse/SOR.h
+CSR.h
+/home/alex/Documents/Pet/SOLASolvers/Sparse/CSR.h
+../utils/overloads.h
+/home/alex/Documents/Pet/SOLASolvers/utils/overloads.h
+../utils/consts.h
+/home/alex/Documents/Pet/SOLASolvers/utils/consts.h
+
+/home/alex/Documents/Pet/SOLASolvers/Sparse/SSOR.h
+CSR.h
+/home/alex/Documents/Pet/SOLASolvers/Sparse/CSR.h
+../utils/overloads.h
+/home/alex/Documents/Pet/SOLASolvers/utils/overloads.h
+../utils/consts.h
+/home/alex/Documents/Pet/SOLASolvers/utils/consts.h
+
 /home/alex/Documents/Pet/SOLASolvers/Sparse/SimpleIteration.h
 vector
 -
-../Sparse/CSR.h
+CSR.h
 /home/alex/Documents/Pet/SOLASolvers/Sparse/CSR.h
+../Chebyshev/Chebyshev.h
+/home/alex/Documents/Pet/SOLASolvers/Chebyshev/Chebyshev.h
 ../utils/overloads.h
 /home/alex/Documents/Pet/SOLASolvers/utils/overloads.h
 ../utils/consts.h
@@ -103,8 +129,12 @@ Sparse/GaussSeidel.h
 /home/alex/Documents/Pet/SOLASolvers/Sparse/GaussSeidel.h
 Sparse/SimpleIteration.h
 /home/alex/Documents/Pet/SOLASolvers/Sparse/SimpleIteration.h
+Sparse/SOR.h
+/home/alex/Documents/Pet/SOLASolvers/Sparse/SOR.h
 Sparse/CSR.h
 /home/alex/Documents/Pet/SOLASolvers/Sparse/CSR.h
+Sparse/SSOR.h
+/home/alex/Documents/Pet/SOLASolvers/Sparse/SSOR.h
 
 /home/alex/Documents/Pet/SOLASolvers/tests/testGauss.h
 cmath

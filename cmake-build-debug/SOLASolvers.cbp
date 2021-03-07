@@ -120,6 +120,12 @@
 		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/Sparse/Jacobi.h">
 			<Option target="SOLASolvers"/>
 		</Unit>
+		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/Sparse/SOR.h">
+			<Option target="SOLASolvers"/>
+		</Unit>
+		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/Sparse/SSOR.h">
+			<Option target="SOLASolvers"/>
+		</Unit>
 		<Unit filename="/home/alex/Documents/Pet/SOLASolvers/Sparse/SimpleIteration.h">
 			<Option target="SOLASolvers"/>
 		</Unit>

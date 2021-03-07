@@ -12,14 +12,11 @@ template<typename T>
 typename DenseMatrix<T>::idx_t GetFirstNonZeroElementInColumn(const DenseMatrix<T>& A, const typename DenseMatrix<T>::idx_t& columnNumber) {
     // Returns First non-zero element in a given matrix column
     using idx_t = typename DenseMatrix<T>::idx_t;
-     auto sizePair = A.GetSize();
-    auto W = sizePair.first;
-    auto H = sizePair.second;
     if (absT(A(columnNumber, columnNumber)) > tolerance<T>) {
         //std::cout << "First handler" << std::endl;
         return columnNumber;
     } else {
-        for (idx_t i=columnNumber+1; i<H; ++i) {
+        for (idx_t i=columnNumber+1; i<A.GetSizeH(); ++i) {
             if (absT(A(i, columnNumber)) > tolerance<T>) {
                 return i;
             }
@@ -39,9 +36,7 @@ std::size_t MakeTriangle(DenseMatrix<T>& A, std::vector<T>& b) { //Ax=b
     auto W = sizePair.first;
     auto H = sizePair.second;
     for (idx_t i=0; i < H-1; ++i) {
-        //std::cout << "Row" << i << std::endl;
         idx_t iNonZero = GetFirstNonZeroElementInColumn(A, i);
-        //std::cout << "iNonZero: " << iNonZero << std::endl;
         if (absT(A(iNonZero, i)) > tolerance<T>) {
             A.swapRows(i, iNonZero);
             std::swap(b[i], b[iNonZero]);
@@ -56,8 +51,6 @@ std::size_t MakeTriangle(DenseMatrix<T>& A, std::vector<T>& b) { //Ax=b
             }
             b[j] -= b[i]*coef;
         }
-        //std::cout << A << std::endl;
-
 
     }
     return nSwaps;

@@ -20,10 +20,14 @@ private:
     std::vector<idx_t> cols;
     std::vector<idx_t> rowSums;
     template<typename EL>
-    friend std::vector<EL> JacobiSolver(const CSRMatrix<EL>& A, const std::vector<EL>& b);
+   friend std::vector<EL> JacobiSolver(const CSRMatrix<EL>& A, const std::vector<EL>& b);
 
     template<typename EL>
     friend std::vector<EL> GaussSeidelSolver(const CSRMatrix<EL>& A, const std::vector<EL>& b);
+    template<typename EL>
+    friend std::vector<EL> SORSolver(const CSRMatrix<EL>& A, const std::vector<EL>& b, const EL& omega);
+    template<typename EL>
+    friend std::vector<EL> SSORSolver(const CSRMatrix<EL>& A, const std::vector<EL>& b, const EL& omega);
 
 public:
     CSRMatrix(const idx_t& H, const idx_t& W, std::set<Triplet<T>> matrix): H(H), W(W) {

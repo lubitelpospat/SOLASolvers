@@ -9,7 +9,7 @@
 #include "../utils/overloads.h"
 #include "../utils/consts.h"
 template<typename T>
-std::vector<T> JacobiSolver(const CSRMatrix<T>& A, const std::vector<T>& b) {
+[[maybe_unused]] std::vector<T> JacobiSolver(const CSRMatrix<T>& A, const std::vector<T>& b) {
     using idx_t = typename CSRMatrix<T>::idx_t;
     std::vector<T> r(b.size()); //невязка
     std::vector<T> x(b.size()); //результирующий вектор
@@ -21,7 +21,6 @@ std::vector<T> JacobiSolver(const CSRMatrix<T>& A, const std::vector<T>& b) {
     while (norm2(r) > tolerance<T>) {
         //std::cout << "hi!\n";
         for (size_t i=0; i<A.H; ++i) {
-            for (idx_t i=0; i<A.H; ++i) {
                 sum = 0;
                 for (idx_t j = A.rowSums[i]; j < A.rowSums[i+1]; ++j) {
                     if (j != A.cols[j]) {
@@ -31,7 +30,6 @@ std::vector<T> JacobiSolver(const CSRMatrix<T>& A, const std::vector<T>& b) {
                     }
                 }
                 xNew[i] = (b[i] - sum)/A(i, i);
-            }
         }
         x = xNew;
         r = A*x - b;

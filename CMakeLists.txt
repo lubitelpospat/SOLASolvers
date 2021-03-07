@@ -11,6 +11,6 @@ include_directories(${Boost_INCLUDE_DIRS})
 
 
 
-add_executable(SOLASolvers main.cpp Dense/DenseMatrix.h utils/Triplet.h Dense/GaussMethod.h utils/consts.h Dense/BackSubstitution.h Generators/GenerateDenseMatrix.h utils/overloads.h tests/testGauss.h Generators/GenerateVector.h utils/gnuplot-iostream.h Dense/LU.h tests/testLU.h tests/testLUSolver.h Sparse/CSR.h Sparse/Jacobi.h Sparse/GaussSeidel.h Sparse/SimpleIteration.h Chebyshev/Chebyshev.h)
+add_executable(SOLASolvers main.cpp Dense/DenseMatrix.h utils/Triplet.h Dense/GaussMethod.h utils/consts.h Dense/BackSubstitution.h Generators/GenerateDenseMatrix.h utils/overloads.h tests/testGauss.h Generators/GenerateVector.h utils/gnuplot-iostream.h Dense/LU.h tests/testLU.h tests/testLUSolver.h Sparse/CSR.h Sparse/Jacobi.h Sparse/GaussSeidel.h Sparse/SimpleIteration.h Chebyshev/Chebyshev.h Sparse/SOR.h Sparse/SSOR.h)
 
 target_link_libraries(SOLASolvers ${Boost_LIBRARIES})
